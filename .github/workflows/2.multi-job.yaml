@@ -1,0 +1,21 @@
+name: Multi Job Workflow
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: pipeline start
+      run: echo "Starting CICD pipeline"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: pipeline complete 
+      run: |
+        echo "Pipeline is Completed Successfully"
+        echo "Repository: ${{ github.repository }}"
+      
