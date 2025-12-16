@@ -5,7 +5,7 @@ on:
 
 jobs:
   checkout:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
     - name: checkout to repository
       uses: actions/checkout@v4
