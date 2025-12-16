@@ -1,0 +1,17 @@
+name: Checkout to repository
+on:
+  push:
+    branches: [main]
+
+jobs:
+  checkout:
+    runs-on: ubuntu
+    steps:
+    - name: checkout to repository
+      uses: actions/checkout@v4
+    - name: List files
+      run: ls -al
+    - name: initilize python
+      uses: actions/setup-python@v5
+    - name: check python version
+      run: python --version
