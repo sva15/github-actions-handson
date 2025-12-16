@@ -11,7 +11,7 @@ jobs:
     steps:
     - name: show event log
       run: |
-      echo "Workflow triggered by: ${{github.actor}}"
-      echo "Commit message: ${{github.event.head_commit.message}}"
-      echo "Branch: ${{github.ref_name}}"
-      echo  "Workflow Completed Successfully"
+        echo "Workflow triggered by: ${{github.actor}}"
+        echo "Commit message: ${{github.event.head_commit.message}}"
+        echo "Branch: ${{github.ref_name}}"
+        echo "Workflow Completed Successfully"
