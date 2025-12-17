@@ -1,0 +1,25 @@
+name: Multi Language
+
+on:
+  push:
+    branches:
+    - main
+jobs:
+  multi-language:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4
+    - name: List files
+      run: ls -al
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+        cache: 'npm'
+    - name: Node version
+      run: node --version
+    - name: Python Setup
+      uses: actions/setup-python@v5
+    - name: python version
+      run: python --version
