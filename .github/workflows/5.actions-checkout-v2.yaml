@@ -9,8 +9,13 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
-    - name: Display current branche
-      run: git branch --show-current
-    - name: Display last Commit
-      run: git log -1 --pretty=format: "%s"
+
+    - name: Display branch
+      run: |
+        echo "Current branch:"
+        git branch --show-current
       
+    - name: Display last commit
+      run: |
+        echo "Last commit message:"
+        git log -1 --pretty=format:"%s"
